@@ -21,8 +21,9 @@ def check_password():
         return True  
     # Show input for password.  
     st.text_input(  
-        "Password", type="password", on_change=password_entered, key="password"  
-    )  
+        "Enter your Password", type="password", on_change=password_entered, key="password"  
+    )
+    st.image("chatbot_picture.png", width=500)
     if "password_correct" in st.session_state:  
         st.error("Incorrect Password")  
     return False
