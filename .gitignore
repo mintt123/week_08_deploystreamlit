@@ -10,8 +10,8 @@ ENV/
 .venv/
 .env
 
-#sensitive data sources
-data/
+#non-sensitive data sources
+#data/
 
 # Distribution / packaging
 build/
