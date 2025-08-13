@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import json
 
-st.title("Sorry, data not available for public use.")
+st.title("Sorry, data not available for full display here.")
 st.image("restricted.png")
 st.write("But here is a sample of the structure of our datasets, data fields, and source owner:")
 
