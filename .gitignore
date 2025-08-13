@@ -10,6 +10,9 @@ ENV/
 .venv/
 .env
 
+#sensitive data sources
+data/
+
 # Distribution / packaging
 build/
 dist/

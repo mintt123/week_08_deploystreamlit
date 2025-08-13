@@ -2,20 +2,14 @@ import streamlit as st
 import pandas as pd
 import json
 
+st.title("Sorry, data not available for public use.")
+st.image("restricted.png")
+st.write("But here is a sample of the structure of our datasets, data fields, and source owner:")
 
-# Load the JSON file
-filepath = './data/courses-full.json'
-with open(filepath, 'r') as file:
-    json_string = file.read()
-    dict_of_courses = json.loads(json_string)
-    print(dict_of_courses)
+df2 = pd.read_csv('./data/metadata.csv')
+df_display = df2.head(3)
+df_display
 
-# Extract the value of the `dict_of_courses` dictionary
-# If you are not sure what the dictionary looks like, you can print it out
-list_of_dict = []
-for course_name, details_dict in dict_of_courses.items():
-    list_of_dict.append(details_dict)
-
-# display the `dict_of_course` as a Pandas DataFrame
-df = pd.DataFrame(list_of_dict)
-df
+with st.expander("You may contact us via email to request for our knowledge base."):
+    st.write("Shiming")
+    st.write("Wei Loon")
