@@ -12,6 +12,8 @@ ENV/
 
 #non-sensitive data sources
 #data/
+/data/metadata.csv
+/logics/testload.py
 
 # Distribution / packaging
 build/

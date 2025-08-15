@@ -1,9 +1,18 @@
 import os
 import openai
 from helper_functions import llm
-
+import json
 import pandas as pd
-df = pd.read_csv('./data/metadata.csv')
+
+# Reading in as CSV file does not seem to work
+# df = pd.read_csv('./data/metadata.csv')
+
+# Load the JSON file
+filepath = './data/metadata2.json'
+# filepath = 'datasets.json'
+with open(filepath, 'r') as file:
+    json_string = file.read()
+    df = json.loads(json_string)
 
 def process_user_message(user_input):
     delimiter = "```"
